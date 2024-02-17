@@ -63,7 +63,7 @@
               <div class="w-full lg:w-2/3 py-10 lg:py-20 px-5 lg:px-0">
                 <h1 class="mb-5 text-3xl lg:text-6xl text-white font-bold">End-to-End Travel with <br><span class="text-[#1DD100]">P Paribahan</span></h1>
                 <p class="mb-8">Discover seamless travel: Book bus tickets hassle-free. Find routes, schedules, and deals. Your journey begins with us. Start exploring now!</p>
-                <a href="#ticket-section" class="text-lg font-bold text-black bg-[#1DD100] py-5 px-8 rounded-xl cursor-pointer inline-block">Buy Tickets</a>
+                <a href="#ticket-section" class="text-lg font-bold text-black bg-[#1DD100] py-5 px-8 rounded-xl cursor-pointer inline-block lg:mb-10">Buy Tickets</a>
               </div>
             </div>
         </div>
@@ -303,6 +303,7 @@
                             <p>Total Price</p>
                             <p>BDT <span id="total-price">00</span></p>
                         </div>
+                        <!-- coupon container -->
                         <p id="coupon-success-para" class="text-[#1DD100]"></p>
                         <div class="flex mb-3">
                             <input type="text" placeholder="Have any coupon?" class="w-full px-4 outline-none rounded-s-lg">
@@ -316,7 +317,17 @@
                     </div>
                     <!-- passenger form -->
                     <div class="p-4 lg:p-8">
-
+                        <h3 class="font-semibold mb-4">Passenger Name*</h3>
+                        <input type="text" placeholder="Enter your name" class="p-6 border border-[#0307121A] rounded-xl outline-none w-full mb-6">
+                        <h3 class="font-semibold mb-4">Phone Number*</h3>
+                        <input type="number" placeholder="Enter your phone number" class="p-6 border border-[#0307121A] rounded-xl outline-none w-full mb-6">
+                        <h3 class="font-semibold mb-4">Email ID</h3>
+                        <input type="email" placeholder="Enter your email id" class="p-6 border border-[#0307121A] rounded-xl outline-none w-full mb-6">
+                        <button class="p-5 w-full bg-[#1DD100] rounded-2xl text-white font-bold text-xl">Next</button>
+                        <div class="mt-3 flex flex-col lg:flex-row gap-2 justify-around opacity-60">
+                            <a class="link">Terms and Conditions</a>
+                            <a class="link">Cancellation Policy</a>
+                        </div>
                     </div>
                 </div>
             </div>
