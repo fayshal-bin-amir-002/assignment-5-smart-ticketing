@@ -22,7 +22,7 @@
         }
     </style>
 </head>
-<body class="raleway-font">
+<body class="raleway-font relative">
 
     <!-- header section start -->
     <header class="container mx-auto px-5 lg:px-28 mb-20 lg:mb-44">
@@ -139,7 +139,7 @@
                     <div class="w-[80%] h-[1px] lg:w-[1px] lg:h-[80%] border-dashed border border-b-white"></div>
 
                     <div class="p-5 lg:p-12 space-y-4">
-                        <h2 class="text-3xl font-bold">Couple20</h2>
+                        <h2 class="text-3xl font-bold">Couple 20</h2>
                         <p class="font-medium opacity-70">Coupon Code</p>
                     </div>
                 </div>
@@ -207,8 +207,8 @@
                 </div>
             </div>
             <!-- seat management container -->
-            <div class="p-4 lg:p-8 bg-white rounded-3xl shadow-lg grid grid-cols-1 lg:grid-cols-5 gap-4 lg:gap-8">
-                <!-- seat management -->
+            <div class="p-4 lg:p-8 bg-white rounded-3xl shadow-lg grid grid-cols-1 lg:grid-cols-5 gap-4 lg:gap-8 relative">
+                <!-- seat management buttons-->
                 <div class="col-span-1 lg:col-span-3">
                     <h3 class="text-2xl font-semibold">Select Your Seat</h3>
                     <div class="my-3 w-full h-[1px] border-dashed border border-[#03071233]"></div>
@@ -218,10 +218,10 @@
                     </div>
                     <div class="my-3 w-full h-[1px] border-dashed border border-[#03071233]"></div>
                     <div class="text-right mb-4">
-                        <i class="fa-solid fa-wheelchair text-lg px-8 py-3 bg-[#0307121A] rounded-xl"></i>
+                        <i class="fa-solid fa-wheelchair text-lg px-14 py-4 bg-[#0307121A] rounded-xl"></i>
                     </div>
-                    <!-- seat -->
-                    <div class="grid grid-cols-5 gap-3 lg:gap-8">
+                    <!-- seat buttons-->
+                    <div class="grid grid-cols-5 gap-3 lg:gap-8" id="seat-btn-container">
                         <div class="col-span-3 grid grid-cols-3 gap-2 lg:gap-3">
                             <button disabled>A</button> 
                             <button class="px-4 lg:px-10 py-2 lg:py-4 rounded-xl bg-[#F7F8F8] text-lg font-medium">A1</button> 
@@ -292,11 +292,11 @@
                         <div class="my-3 w-full h-[1px] border-dashed border border-[#03071233]"></div>
                         <!-- ticket title and price list container -->
                         <div class="opacity-60" id="ticket-title-price-list-container">
-                            <div class="flex justify-between">
+                            <!-- <div class="flex justify-between">
                                 <p>hi</p>
                                 <p>hi</p>
                                 <p>hi</p>
-                            </div>   
+                            </div>    -->
                         </div>
                         <div class="my-3 w-full h-[1px] border border-[#03071233]"></div>
                         <div class="flex justify-between font-medium mb-3">
@@ -306,8 +306,8 @@
                         <!-- coupon container -->
                         <p id="coupon-success-para" class="text-[#1DD100]"></p>
                         <div class="flex mb-3">
-                            <input type="text" placeholder="Have any coupon?" class="w-full px-4 outline-none rounded-s-lg">
-                            <button class="font-semibold px-5 py-3 text-white bg-[#1DD100] rounded-r-lg">Apply</button>
+                            <input type="text" placeholder="Have any coupon?" class="w-full px-4 outline-none rounded-s-lg" id="coupon-box">
+                            <button id="couponApplyBtn" class="font-semibold px-5 py-3 text-white bg-[#1DD100] rounded-r-lg" disabled>Apply</button>
                         </div>
                         <!-- grand total container -->
                         <div class="flex justify-between font-medium">
@@ -320,14 +320,27 @@
                         <h3 class="font-semibold mb-4">Passenger Name*</h3>
                         <input type="text" placeholder="Enter your name" class="p-6 border border-[#0307121A] rounded-xl outline-none w-full mb-6">
                         <h3 class="font-semibold mb-4">Phone Number*</h3>
-                        <input type="number" placeholder="Enter your phone number" class="p-6 border border-[#0307121A] rounded-xl outline-none w-full mb-6">
+                        <input id="phoneNumber" type="text" placeholder="Enter your phone number" class="p-6 border border-[#0307121A] rounded-xl outline-none w-full mb-6">
                         <h3 class="font-semibold mb-4">Email ID</h3>
                         <input type="email" placeholder="Enter your email id" class="p-6 border border-[#0307121A] rounded-xl outline-none w-full mb-6">
-                        <button class="p-5 w-full bg-[#1DD100] rounded-2xl text-white font-bold text-xl">Next</button>
+                        <!-- ticket submit button -->
+                        <button id="btn-next" class="p-5 w-full bg-[#1DD100] rounded-2xl text-white font-bold text-xl" disabled>Next</button>
                         <div class="mt-3 flex flex-col lg:flex-row gap-2 justify-around opacity-60">
                             <a class="link">Terms and Conditions</a>
                             <a class="link">Cancellation Policy</a>
                         </div>
+                    </div>
+                </div>
+                <!-- success msg pop up -->
+                <div id="popUp" class="min-w-full min-h-full flex justify-center items-center absolute z-10 hidden">
+                    <div class="p-6 lg:p-12 bg-white max-w-[650px] text-center">
+                        <img src="images/success.png" class="inline mb-8">
+                        <h3 class="text-2xl font-bold text-[#27AE60] mb-8">SUCCESS</h3>
+                        <p class="text-xl font-medium opacity-80 mb-5">Thank you for Booking Our Bus Seats. 
+                            We are working hard to find the best service and deals for you. 
+                            Shortly you will find a confirmation in your email.
+                        </p>
+                        <button id="closePopUpBtn" class="text-xl font-semibold text-white py-4 px-20 bg-[#27AE60] rounded-[32px]">Continue</button>
                     </div>
                 </div>
             </div>
@@ -336,6 +349,8 @@
 
     </main>
     <!-- main section end -->
+
+    <div class="min-w-full min-h-full absolute top-0 left-0 bg-black/30 hidden" id="screenBlack"></div>
     
 
     <script src="app.js"></script>
