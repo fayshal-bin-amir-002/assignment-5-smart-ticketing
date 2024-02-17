@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Ticketing</title>
+    <!-- tailwind and daisy ul cdn link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- font awesome link -->
+    <script src="https://kit.fontawesome.com/2f4548b852.js" crossorigin="anonymous"></script>
+    <style>
+        .raleway-font {
+            font-family: "Raleway", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body class="raleway-font">
+
+    <!-- header section start -->
+    <header class="container mx-auto px-5 lg:px-28 mb-20 lg:mb-44">
+        <!-- nav section -->
+        <nav class="py-5 lg:py-10">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                  <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <i class="fa-solid fa-bars-staggered text-[#1DD100]"></i>
+                    </div>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-lg font-medium">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Destination</a></li>
+                        <li><a>Search</a></li>
+                    </ul>
+                  </div>
+                  <a class="text-2xl lg:text-4xl font-extrabold">P-Ticket</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                  <ul class="menu menu-horizontal px-1 text-lg font-medium">
+                    <li class="hover:text-[#1DD100]"><a>Home</a></li>
+                    <li class="hover:text-[#1DD100]"><a>About</a></li>
+                    <li class="hover:text-[#1DD100]"><a>Destination</a></li>
+                    <li class="hover:text-[#1DD100]"><a>Search</a></li>
+                  </ul>
+                </div>
+                <div class="navbar-end">
+                  <a class="text-lg font-bold text-[#1DD100] py-4 px-8 bg-[#1DD1001A] rounded-xl border border-[#1DD100]/40 cursor-pointer">Bus <i class="fa-solid fa-van-shuttle ms-1"></i></a>
+                </div>
+            </div>
+        </nav>
+        <!-- banner section -->
+        <div class="hero rounded-[32px]" style="background-image: url(images/banner.png);">
+            <div class="hero-overlay bg-opacity-40 rounded-[32px]"></div>
+            <div class="hero-content text-center text-neutral-content p-0">
+              <div class="w-full lg:w-2/3 py-10 lg:py-20 px-5 lg:px-0">
+                <h1 class="mb-5 text-3xl lg:text-6xl text-white font-bold">End-to-End Travel with <br><span class="text-[#1DD100]">P Paribahan</span></h1>
+                <p class="mb-8">Discover seamless travel: Book bus tickets hassle-free. Find routes, schedules, and deals. Your journey begins with us. Start exploring now!</p>
+                <a href="#ticket-section" class="text-lg font-bold text-black bg-[#1DD100] py-5 px-8 rounded-xl cursor-pointer inline-block">Buy Tickets</a>
+              </div>
+            </div>
+        </div>
+        <!-- stat div container -->
+        <div class="w-4/5 mx-auto flex flex-col lg:flex-row gap-4 justify-between lg:transform lg:-translate-y-16 mt-4 lg:mt-0">
+            <!-- card 1 -->
+            <div class="flex flex-row gap-6 justify-center items-center p-8 bg-white rounded-3xl border-b-[3px] border-b-[#1DD100] max-w-max shadow-lg">
+                <div>
+                    <i class="fa-solid fa-people-group text-6xl text-[#1DD100]"></i>
+                </div>
+                <div>
+                    <h2 class="text-4xl font-bold mb-2">500K+</h2>
+                    <p class="text-lg opacity-60">Registered users</p>
+                </div>
+            </div>
+            <!-- card 2 -->
+            <div class="flex flex-row gap-6 justify-center items-center p-8 bg-white rounded-3xl border-b-[3px] border-b-[#1DD100] max-w-max shadow-lg">
+                <div>
+                    <i class="fa-solid fa-ticket-simple text-6xl text-[#1DD100]"></i>
+                </div>
+                <div>
+                    <h2 class="text-4xl font-bold mb-2">1.7 lacks</h2>
+                    <p class="text-lg opacity-60">Tickets sold</p>
+                </div>
+            </div>
+            <!-- card 3 -->
+            <div class="flex flex-row gap-6 justify-center items-center p-8 bg-white rounded-3xl border-b-[3px] border-b-[#1DD100] max-w-max shadow-lg">
+                <div>
+                    <i class="fa-solid fa-caravan text-6xl text-[#1DD100]"></i>
+                </div>
+                <div>
+                    <h2 class="text-4xl font-bold mb-2">80K+</h2>
+                    <p class="text-lg opacity-60">Rental partners</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header section end -->
+
+    <!-- main section start -->
+    <main class="container mx-auto">
+
+        <!-- best offer section start -->
+        <section id="best-offer" class="px-5 lg:px-28 mb-10 lg:mb-32">
+            <div class="text-center mb-6 lg:mb-12">
+                <h2 class="text-2xl lg:text-4xl font-bold">Best offers for you</h2>
+            </div>
+            <!-- coupon card container -->
+            <div class="grid gap-4 lg:gap-6 grid-cols-1 lg:grid-cols-2 mb-6 lg:mb-14">
+                <!-- coupon card 1 -->
+                <div class="flex flex-col lg:flex-row items-center bg-[#FFBF0F] rounded-3xl shadow-md">
+                    <div class="p-5 lg:p-12 w-[60%] space-y-4">
+                        <h2 class="text-4xl font-bold">15% OFF</h2>
+                        <h4 class="text-lg font-semibold">on your next purchase</h4>
+                        <p class="font-medium opacity-70">use by January 2024</p>
+                    </div>
+
+                    <div class="w-[80%] h-[1px] lg:w-[1px] lg:h-[80%] border-dashed border border-b-white"></div>
+
+                    <div class="p-5 lg:p-12 space-y-4">
+                        <h2 class="text-3xl font-bold">NEW15</h2>
+                        <p class="font-medium opacity-70">Coupon Code</p>
+                    </div>
+                </div>
+                <!-- coupon card 2 -->
+                <div class="flex flex-col lg:flex-row items-center bg-[#F78C9C] rounded-3xl shadow-md">
+                    <div class="p-5 lg:p-12 w-[60%] space-y-4">
+                        <h2 class="text-4xl font-bold">20% OFF</h2>
+                        <h4 class="text-lg font-semibold">on your next purchase</h4>
+                        <p class="font-medium opacity-70">use by January 2024</p>
+                    </div>
+
+                    <div class="w-[80%] h-[1px] lg:w-[1px] lg:h-[80%] border-dashed border border-b-white"></div>
+
+                    <div class="p-5 lg:p-12 space-y-4">
+                        <h2 class="text-3xl font-bold">Couple20</h2>
+                        <p class="font-medium opacity-70">Coupon Code</p>
+                    </div>
+                </div>
+            </div>
+            <!-- see all offer button -->
+            <div class="text-center">
+                <button class="py-5 px-8 border border-[#1DD100] rounded-xl text-[#1DD100] text-xl font-bold">See All Offers</button>
+            </div>
+        </section>
+        <!-- best offer section end -->
+
+        <!-- ticket section start -->
+        <section id="ticket-section" class="p-5 lg:px-32 lg:py-28 border-t-2 border-[#1DD100] rounded-t-[88px]">
+            <!-- text container -->
+            <div class="lg:w-1/2 mx-auto text-center mb-6 lg:mb-12">
+                <h2 class="text-2xl lg:text-4xl font-bold mb-4 lg:mb-6">P.H Paribahan</h2>
+                <p class="text-lg opacity-60">Online bus ticket counter: book, reserve, and purchase bus tickets, offering routes, schedules, and seat selection for travelers.</p>
+            </div>
+            <!-- ticket details container -->
+            <div class="mb-6">
+                <div class="flex flex-col lg:flex-row items-center bg-white rounded-3xl shadow-lg">
+                    <div class="p-4 lg:p-8 lg:w-[75%] space-y-4">
+                        <!-- upper details -->
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex flex-col lg:flex-row justify-center items-center gap-3 text-center">
+                                <div>
+                                    <i class="fa-solid fa-van-shuttle text-6xl text-[#1DD100]"></i>
+                                </div>
+                                <div>
+                                    <h2 class="text-3xl font-bold mb-3">Greenline Paribahan</h2>
+                                    <p class="text-lg opacity-60">Coach-009-WEB ! AC_Business</p>
+                                </div>
+                            </div> 
+                            <div>
+                                <p class="p-4 text-[#1DD100] text-lg font-medium rounded-xl bg-[#1DD10026] max-w-max"><i class="fa-solid fa-chair"></i> <span id="availableSeat" class="mx-1">40</span> Seats left</p>
+                            </div> 
+                        </div>
+                        <!-- ticket details -->
+                        <div class="p-8 space-y-6 bg-[#F7F8F8] rounded-3xl shadow-md">
+                            <div class="flex items-center justify-between">
+                                <p class="text-lg font-semibold opacity-60">Route</p>
+                                <p class="text-lg font-semibold">Dhaka - Sylhet</p>
+                            </div>
+                            <div class="w-full h-[1px] border-dashed border border-black/30"></div>
+                            <div class="flex items-center justify-between">
+                                <p class="text-lg font-semibold opacity-60">Departure Time</p>
+                                <p class="text-lg font-semibold">9:00 PM</p>
+                            </div>
+                            <div class="w-full h-[1px] border-dashed border border-black/30"></div>
+                            <div class="flex items-center justify-between flex-col lg:flex-row gap-2">
+                                <p class="p-4 text-base font-medium opacity-80 bg-[#0307120D] rounded-xl">Boarding Point - Laxmipur</p>
+                                <p class="p-4 text-base font-medium opacity-80 bg-[#0307120D] rounded-xl">Dropping Point - Bogura</p>
+                                <p class="p-4 text-base font-medium opacity-80 bg-[#0307120D] rounded-xl">Est. Time - 11 Hour</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="my-3 lg:mx-5 w-[90%] h-[1px] lg:w-[1px] lg:h-[350px] border-dashed border border-[#1DD100]"></div>
+
+                    <div class="p-5 lg:p-12 space-y-4 text-center">
+                        <i class="fa-solid fa-dollar-sign py-3 px-4 bg-[#1DD100] rounded-full text-white font-semibold"></i>
+                        <h2 class="text-3xl font-bold">550 Taka</h2>
+                        <p class="font-semibold text-2xl opacity-70">Per Seat</p>
+                    </div>
+                </div>
+            </div>
+            <!-- seat management container -->
+            <div class="p-4 lg:p-8 bg-white rounded-3xl shadow-lg grid grid-cols-1 lg:grid-cols-5 gap-4 lg:gap-8">
+                <!-- seat management -->
+                <div class="col-span-1 lg:col-span-3">
+                    <h3 class="text-2xl font-semibold">Select Your Seat</h3>
+                    <div class="my-3 w-full h-[1px] border-dashed border border-[#03071233]"></div>
+                    <div class="flex items-center justify-between">
+                        <p class="text-lg font-medium text-[#03071280]"><i class="fa-solid fa-chair me-1"></i> Available</p>
+                        <p class="text-lg font-medium text-[#1DD100]"><i class="fa-solid fa-chair me-1"></i> Selected</p>
+                    </div>
+                    <div class="my-3 w-full h-[1px] border-dashed border border-[#03071233]"></div>
+                    <div class="text-right mb-4">
+                        <i class="fa-solid fa-wheelchair text-lg px-8 py-3 bg-[#0307121A] rounded-xl"></i>
+                    </div>
+                    <!-- seat -->
+                    <div class="grid grid-cols-5 gap-3 lg:gap-8">
+                        <div class="col-span-3 grid grid-cols-3 gap-2 lg:gap-3">
+                            <button disabled>A</button> 
+                            <button class="px-4 lg:px-10 py-2 lg:py-4 rounded-xl bg-[#F7F8F8] text-lg font-medium">A1</button> 
+                            <button class="px-4 lg:px-10 py-2 lg:py-4 rounded-xl bg-[#F7F8F8] text-lg font-medium">A2</button>
+                            <button disabled>B</button> 
+                            <button class="px-4 lg:px-10 py-2 lg:py-4 rounded-xl bg-[#F7F8F8] text-lg font-medium">B1</button> 
+                            <button class="px-4 lg:px-10 py-2 lg:py-4 rounded-xl bg-[#F7F8F8] text-lg font-medium">B2</button>
+                            <button disabled>C</button> 
+                            <button class="px-4 lg:px-10 py-2 lg:py-4 rounded-xl bg-[#F7F8F8] text-lg font-medium">C1</button> 
+                            <button class="px-4 lg:px-10 py-2 lg:py-4 rounded-xl bg-[#F7F8F8] text-lg font-medium">C2</button>
+                            <button disabled>D</button> 
+                            <button class="px-4 lg:px-10 py-2 lg:py-4 rounded-xl bg-[#F7F8F8] text-lg font-medium">D1</button> 
+                            <button class="px-4 lg:px-10 py-2 lg:py-4 rounded-xl bg-[#F7F8F8] text-lg font-medium">D2</button>
+                            <button disabled>E</button> 
+                            <button class="px-4 lg:px-10 py-2 lg:py-4 rounded-xl bg-[#F7F8F8] text-lg font-medium">E1</button> 
+                            <button class="px-4 lg:px-10 py-2 lg:py-4 rounded-xl bg-[#F7F8F8] text-lg font-medium">E2</button>
+                            <button disabled>F</button> 
+                            <button class="px-4 lg:px-10 py-2 lg:py-4 rounded-xl bg-[#F7F8F8] text-lg font-medium">F1</button> 
+                            <button class="px-4 lg:px-10 py-2 lg:py-4 rounded-xl bg-[#F7F8F8] text-lg font-medium">F2</button>
+                            <button disabled>G</button> 
+                            <button class="px-4 lg:px-10 py-2 lg:py-4 rounded-xl bg-[#F7F8F8] text-lg font-medium">G1</button> 
+                            <button class="px-4 lg:px-10 py-2 lg:py-4 rounded-xl bg-[#F7F8F8] text-lg font-medium">G2</button>
+                            <button disabled>H</button> 
+                            <button class="px-4 lg:px-10 py-2 lg:py-4 rounded-xl bg-[#F7F8F8] text-lg font-medium">H1</button> 
+                            <button class="px-4 lg:px-10 py-2 lg:py-4 rounded-xl bg-[#F7F8F8] text-lg font-medium">H2</button>
+                            <button disabled>I</button> 
+                            <button class="px-4 lg:px-10 py-2 lg:py-4 rounded-xl bg-[#F7F8F8] text-lg font-medium">I1</button> 
+                            <button class="px-4 lg:px-10 py-2 lg:py-4 rounded-xl bg-[#F7F8F8] text-lg font-medium">I2</button>
+                            <button disabled>J</button> 
+                            <button class="px-4 lg:px-10 py-2 lg:py-4 rounded-xl bg-[#F7F8F8] text-lg font-medium">J1</button> 
+                            <button class="px-4 lg:px-10 py-2 lg:py-4 rounded-xl bg-[#F7F8F8] text-lg font-medium">J2</button>
+                        </div>
+                        <div class="col-span-2 grid grid-cols-2 gap-2 lg:gap-3">
+                            <button class="px-4 lg:px-10 py-2 lg:py-4 rounded-xl bg-[#F7F8F8] text-lg font-medium">A3</button> 
+                            <button class="px-4 lg:px-10 py-2 lg:py-4 rounded-xl bg-[#F7F8F8] text-lg font-medium">A4</button>
+                            <button class="px-4 lg:px-10 py-2 lg:py-4 rounded-xl bg-[#F7F8F8] text-lg font-medium">B3</button> 
+                            <button class="px-4 lg:px-10 py-2 lg:py-4 rounded-xl bg-[#F7F8F8] text-lg font-medium">B4</button>
+                            <button class="px-4 lg:px-10 py-2 lg:py-4 rounded-xl bg-[#F7F8F8] text-lg font-medium">C3</button> 
+                            <button class="px-4 lg:px-10 py-2 lg:py-4 rounded-xl bg-[#F7F8F8] text-lg font-medium">C4</button>
+                            <button class="px-4 lg:px-10 py-2 lg:py-4 rounded-xl bg-[#F7F8F8] text-lg font-medium">D3</button> 
+                            <button class="px-4 lg:px-10 py-2 lg:py-4 rounded-xl bg-[#F7F8F8] text-lg font-medium">D4</button>
+                            <button class="px-4 lg:px-10 py-2 lg:py-4 rounded-xl bg-[#F7F8F8] text-lg font-medium">E3</button> 
+                            <button class="px-4 lg:px-10 py-2 lg:py-4 rounded-xl bg-[#F7F8F8] text-lg font-medium">E4</button>
+                            <button class="px-4 lg:px-10 py-2 lg:py-4 rounded-xl bg-[#F7F8F8] text-lg font-medium">F3</button> 
+                            <button class="px-4 lg:px-10 py-2 lg:py-4 rounded-xl bg-[#F7F8F8] text-lg font-medium">F4</button>
+                            <button class="px-4 lg:px-10 py-2 lg:py-4 rounded-xl bg-[#F7F8F8] text-lg font-medium">G3</button> 
+                            <button class="px-4 lg:px-10 py-2 lg:py-4 rounded-xl bg-[#F7F8F8] text-lg font-medium">G4</button>
+                            <button class="px-4 lg:px-10 py-2 lg:py-4 rounded-xl bg-[#F7F8F8] text-lg font-medium">H3</button> 
+                            <button class="px-4 lg:px-10 py-2 lg:py-4 rounded-xl bg-[#F7F8F8] text-lg font-medium">H4</button>
+                            <button class="px-4 lg:px-10 py-2 lg:py-4 rounded-xl bg-[#F7F8F8] text-lg font-medium">I3</button> 
+                            <button class="px-4 lg:px-10 py-2 lg:py-4 rounded-xl bg-[#F7F8F8] text-lg font-medium">I4</button>
+                            <button class="px-4 lg:px-10 py-2 lg:py-4 rounded-xl bg-[#F7F8F8] text-lg font-medium">J3</button> 
+                            <button class="px-4 lg:px-10 py-2 lg:py-4 rounded-xl bg-[#F7F8F8] text-lg font-medium">J4</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- ticket submit -->
+                <div class="col-span-1 lg:col-span-2">
+                    <h3 class="text-2xl font-semibold">Select Your Seat</h3>
+                    <div class="my-3 w-full h-[1px] border-dashed border border-[#03071233]"></div> 
+                    <!-- seat title and price container -->
+                    <div class="p-4 lg:p-8 bg-[#F7F8F8] rounded-xl shadow-lg">
+                        <div class="flex items-center justify-between">
+                            <p class="font-medium">Seat <span id="seatInputCount" class="bg-[#1DD100] px-1 rounded-full text-white">0</span></p>
+                            <p class="font-medium">Class</p>
+                            <p class="font-medium">Price</p>
+                        </div>
+                        <div class="my-3 w-full h-[1px] border-dashed border border-[#03071233]"></div>
+                        <!-- ticket title and price list container -->
+                        <div class="opacity-60" id="ticket-title-price-list-container">
+                            <div class="flex justify-between">
+                                <p>hi</p>
+                                <p>hi</p>
+                                <p>hi</p>
+                            </div>   
+                        </div>
+                        <div class="my-3 w-full h-[1px] border border-[#03071233]"></div>
+                        <div class="flex justify-between font-medium mb-3">
+                            <p>Total Price</p>
+                            <p>BDT <span id="total-price">00</span></p>
+                        </div>
+                        <p id="coupon-success-para" class="text-[#1DD100]"></p>
+                        <div class="flex mb-3">
+                            <input type="text" placeholder="Have any coupon?" class="w-full px-4 outline-none rounded-s-lg">
+                            <button class="font-semibold px-5 py-3 text-white bg-[#1DD100] rounded-r-lg">Apply</button>
+                        </div>
+                        <!-- grand total container -->
+                        <div class="flex justify-between font-medium">
+                            <p>Grand Total</p>
+                            <p>BDT <span id="grand-total-ammount">00</span></p>
+                        </div>
+                    </div>
+                    <!-- passenger form -->
+                    <div class="p-4 lg:p-8">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ticket section end -->
+
+    </main>
+    <!-- main section end -->
+    
+
+    <script src="app.js"></script>
+</body>
+</html>
