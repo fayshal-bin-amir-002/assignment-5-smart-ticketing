@@ -11,6 +11,8 @@ const closePopUpBtn = document.getElementById('closePopUpBtn');
 const couponApplyBtn = document.getElementById('couponApplyBtn');
 const couponSuccessPara = document.getElementById('coupon-success-para');
 const couponBox = document.getElementById('coupon-box');
+const couponContainer = document.getElementById('coupon-container');
+const discountMsgContainer = document.getElementById('discount-msg-container');
 const seatBtnContainer = document.querySelectorAll('#seat-btn-container button'); 
 
 let ticketCount = 0;
@@ -102,12 +104,28 @@ closePopUpBtn.addEventListener('click', function() {
 
 // coupon apply btn click
 couponApplyBtn.addEventListener('click', function() {
+    const div = document.createElement('div');
+    div.classList.add('flex', 'justify-between');
+    const p1 = document.createElement('p');
+    p1.innerText = 'Total Discount';
+    div.appendChild(p1);
+    const p2 = document.createElement('p');
+    
+
     const couponText = couponBox.value.trim();
     if(couponText === 'NEW15') {
+        p2.innerText = (parseInt(totalPriceSpan.innerText) * 15) / 100 + ' BDT';
+        div.appendChild(p2);
+        discountMsgContainer.appendChild(div);
         grandTotalAmmountSpan.innerText =parseInt(totalPriceSpan.innerText) - (parseInt(totalPriceSpan.innerText) * 15) / 100;
+        couponContainer.classList.add('hidden');
     }
     else if(couponText === 'Couple 20') {
+        p2.innerText = 'BDT ' + (parseInt(totalPriceSpan.innerText) * 20) / 100 ;
+        div.appendChild(p2);
+        discountMsgContainer.appendChild(div);
         grandTotalAmmountSpan.innerText =parseInt(totalPriceSpan.innerText) - (parseInt(totalPriceSpan.innerText) * 20) / 100;
+        couponContainer.classList.add('hidden');
     }
     else {
         grandTotalAmmountSpan.innerText = parseInt(totalPriceSpan.innerText);
