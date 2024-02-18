@@ -114,7 +114,7 @@ couponApplyBtn.addEventListener('click', function() {
 
     const couponText = couponBox.value.trim();
     if(couponText === 'NEW15') {
-        p2.innerText = (parseInt(totalPriceSpan.innerText) * 15) / 100 + ' BDT';
+        p2.innerText =  'BDT ' + (parseInt(totalPriceSpan.innerText) * 15) / 100;
         div.appendChild(p2);
         discountMsgContainer.appendChild(div);
         grandTotalAmmountSpan.innerText =parseInt(totalPriceSpan.innerText) - (parseInt(totalPriceSpan.innerText) * 15) / 100;
