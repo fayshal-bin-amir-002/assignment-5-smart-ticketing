@@ -66,7 +66,7 @@ for(const btn of seatBtnContainer) {
 }
 let number;
 
-phoneNumber.addEventListener('blur', function(e) {
+phoneNumber.addEventListener('input', function(e) {
     number = e.target.value;
     checkNextBtnValidation1(number.trim());
 });
